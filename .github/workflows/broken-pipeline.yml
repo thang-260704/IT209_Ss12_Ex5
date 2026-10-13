@@ -35,7 +35,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.REGISTY_TOKEN }}   # LỖI 2: sai chính tả tên secret
+          password: ${{ secrets.REGISTRY_TOKEN }}  # SỬA LỖI 2
 
       - name: Build và push Docker image
         uses: docker/build-push-action@v5
