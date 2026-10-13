@@ -1,4 +1,4 @@
-name: Broken Pipeline
+name: Broken Pipeline (fixed)
 
 on:
   push:
@@ -40,7 +40,7 @@ jobs:
       - name: Build và push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./docker                         # LỖI 3: sai thư mục
-          file: ./docker/Dockerfile
+          context: .                # SỬA LỖI 3
+          file: ./Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/it209_ss12_ex5:latest
