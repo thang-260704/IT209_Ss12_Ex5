@@ -24,7 +24,8 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
-      # LỖI 1: thiếu bước chmod +x gradlew
+      - name: Cấp quyền thực thi cho Gradle Wrapper   # SỬA LỖI 1
+        run: chmod +x gradlew
 
       - name: Chạy JUnit Test
         run: ./gradlew test
